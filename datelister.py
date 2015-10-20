@@ -24,4 +24,4 @@ def cli(frame, start, end, formatstr):
     end = parsedate(end, start.replace(days=DEFAULT_DAYS))
 
     for r in arrow.Arrow.range(frame, start, end):
-        print r.format(formatstr)
+        click.echo(r.format(formatstr))
